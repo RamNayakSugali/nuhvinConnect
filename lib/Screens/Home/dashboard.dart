@@ -398,6 +398,198 @@ class _DashboardState extends State<Dashboard> {
                     ),
               ),
             ),
+            SizedBox(
+              height: 10.h,
+            ),
+            InkWell(
+              onTap: () {
+                Get.toNamed(kApplyLeaveScreen);
+              },
+              child: Container(
+                margin: EdgeInsets.only(left: 15.h, right: 15.w),
+                decoration: BoxDecoration(
+                    color: Kwhite,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Ktextcolor.withOpacity(0.2),
+                        blurRadius: 1,
+                        offset: const Offset(0, 0),
+                        spreadRadius: 1,
+                      )
+                    ],
+                    borderRadius: BorderRadius.circular(10.r)),
+                //margin: EdgeInsets.all(13.r),
+                child: ListTile(
+                    visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                    leading: Image.asset(
+                      "assets/images/apply_leave.png",
+                      // color: KText,
+                      height: 16.h,
+                    ),
+                    minLeadingWidth: 0,
+                    title: Text(
+                      "Apply Leave",
+                      style: GoogleFonts.roboto(
+                          fontSize: kFourteenFont,
+                          fontWeight: kFW600,
+                          color: KdarkText),
+                    ),
+                    trailing: Icon(
+                      Icons.keyboard_arrow_right,
+                      color: kOrange,
+                      size: 28.sp,
+                    )
+                    // Image.asset(
+                    //   Actions[i]["Subimage"],
+                    //   height: 30.h,
+                    // ),
+                    ),
+              ),
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            InkWell(
+              onTap: () {
+                Get.toNamed(kQuizhome);
+              },
+              child: Container(
+                margin: EdgeInsets.only(left: 15.h, right: 15.w),
+                decoration: BoxDecoration(
+                    color: Kwhite,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Ktextcolor.withOpacity(0.2),
+                        blurRadius: 1,
+                        offset: const Offset(0, 0),
+                        spreadRadius: 1,
+                      )
+                    ],
+                    borderRadius: BorderRadius.circular(10.r)),
+                //margin: EdgeInsets.all(13.r),
+                child: ListTile(
+                    visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                    leading: Image.asset(
+                      "assets/images/attendance.png",
+                      color: KText,
+                      height: 16.h,
+                    ),
+                    minLeadingWidth: 0,
+                    title: Text(
+                      "Quiz",
+                      style: GoogleFonts.roboto(
+                          fontSize: kFourteenFont,
+                          fontWeight: kFW600,
+                          color: KdarkText),
+                    ),
+                    trailing: Icon(
+                      Icons.keyboard_arrow_right,
+                      color: kOrange,
+                      size: 28.sp,
+                    )
+                    // Image.asset(
+                    //   Actions[i]["Subimage"],
+                    //   height: 30.h,
+                    // ),
+                    ),
+              ),
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            InkWell(
+              onTap: () {
+                Get.toNamed(kHolidayScreen);
+              },
+              child: Container(
+                margin: EdgeInsets.only(left: 15.h, right: 15.w),
+                decoration: BoxDecoration(
+                    color: Kwhite,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Ktextcolor.withOpacity(0.2),
+                        blurRadius: 1,
+                        offset: const Offset(0, 0),
+                        spreadRadius: 1,
+                      )
+                    ],
+                    borderRadius: BorderRadius.circular(10.r)),
+                //margin: EdgeInsets.all(13.r),
+                child: ListTile(
+                    visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                    leading: Image.asset(
+                      "assets/images/attendance.png",
+                      color: KText,
+                      height: 16.h,
+                    ),
+                    minLeadingWidth: 0,
+                    title: Text(
+                      "Holidays List",
+                      style: GoogleFonts.roboto(
+                          fontSize: kFourteenFont,
+                          fontWeight: kFW600,
+                          color: KdarkText),
+                    ),
+                    trailing: Icon(
+                      Icons.keyboard_arrow_right,
+                      color: kOrange,
+                      size: 28.sp,
+                    )
+                    // Image.asset(
+                    //   Actions[i]["Subimage"],
+                    //   height: 30.h,
+                    // ),
+                    ),
+              ),
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            InkWell(
+              onTap: () {
+                Get.toNamed(kCourseScreen);
+              },
+              child: Container(
+                margin: EdgeInsets.only(left: 15.h, right: 15.w),
+                decoration: BoxDecoration(
+                    color: Kwhite,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Ktextcolor.withOpacity(0.2),
+                        blurRadius: 1,
+                        offset: const Offset(0, 0),
+                        spreadRadius: 1,
+                      )
+                    ],
+                    borderRadius: BorderRadius.circular(10.r)),
+                //margin: EdgeInsets.all(13.r),
+                child: ListTile(
+                    visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                    leading: Image.asset(
+                      "assets/images/attendance.png",
+                      color: KText,
+                      height: 16.h,
+                    ),
+                    minLeadingWidth: 0,
+                    title: Text(
+                      "Courses",
+                      style: GoogleFonts.roboto(
+                          fontSize: kFourteenFont,
+                          fontWeight: kFW600,
+                          color: KdarkText),
+                    ),
+                    trailing: Icon(
+                      Icons.keyboard_arrow_right,
+                      color: kOrange,
+                      size: 28.sp,
+                    )
+                    // Image.asset(
+                    //   Actions[i]["Subimage"],
+                    //   height: 30.h,
+                    // ),
+                    ),
+              ),
+            ),
           ],
         ),
       ),
