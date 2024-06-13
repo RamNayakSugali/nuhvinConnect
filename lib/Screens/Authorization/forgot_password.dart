@@ -72,7 +72,6 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               SizedBox(
                 height: 95.h,
               ),
-
               CustomButton(
                   borderRadius: BorderRadius.circular(30.r),
                   Color: kOrange,
@@ -86,7 +85,6 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                   onTap: () {
                     Get.back();
                   }),
-            
               SizedBox(
                 height: 20.h,
               ),
