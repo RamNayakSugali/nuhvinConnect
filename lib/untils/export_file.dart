@@ -46,6 +46,15 @@ export 'package:nuhvinconnect/Screens/profile/profile.dart';
 // SettingsScreen
 export 'package:nuhvinconnect/Screens/Settings/settings_screen.dart';
 export 'package:nuhvinconnect/Screens/feedback_screen.dart';
+export 'package:nuhvinconnect/Screens/holidayslist_screen.dart';
+export 'package:nuhvinconnect/Screens/courses/courses_screen.dart';
+export 'package:nuhvinconnect/Screens/courses/course_description.dart';
+export 'package:nuhvinconnect/Screens/applyLeave_screen.dart';
+export 'package:nuhvinconnect/Screens/attendance_screen.dart';
+export 'package:nuhvinconnect/Screens/quiz/quiz.dart';
+export 'package:nuhvinconnect/Screens/quiz/quiz_start.dart';
+export 'package:nuhvinconnect/Screens/quiz/quiz_result.dart';
+export 'package:nuhvinconnect/Screens/quiz/quiz_game.dart';
 export 'package:nuhvinconnect/Screens/Settings/data_and_storage.dart';
 export 'package:nuhvinconnect/Screens/Settings/messaging.dart';
 

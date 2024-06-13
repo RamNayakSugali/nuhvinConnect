@@ -1,8 +1,7 @@
- 
 import 'package:nuhvinconnect/untils/export_file.dart';
 
 // //////Screens
- 
+
 export 'package:nuhvinconnect/Screens/splash_screen.dart';
 
 String kSplashScreen = "/Screens/splash_screen.dart";
@@ -18,13 +17,21 @@ String kNewChatScreen = "/Screens/Chat/new_chat.dart";
 String kProfileScreen = "/Screens/profile/profile.dart";
 String kSettingsScreen = "/Screens/Settings/settings_screen.dart";
 String kFeedbackScreen = "/Screens/feedback_screen.dart";
+String kCourseScreen = "/Screens/courses/courses_screen.dart";
+String kCourseDescriptionScreen = "/Screens/courses/courses_description.dart";
+String kHolidayScreen = "/Screens/holidayslist_screen.dart";
+String kApplyLeaveScreen = "/Screens/applyLeave_screen.dart";
+String kAttendaceScreen = "/Screens/attendance_screen.dart";
+String kQuizhome = "/Screens/quiz/quiz.dart";
+String kQuizgame = "/Screens/quiz/quiz_game.dart";
+String kQuizresults = "/Screens/quiz/quiz_result.dart";
+String kQuizstart = "/Screens/quiz/quiz_start.dart";
 String kDataScreen = "/Screens/Settings/data_and_storage.dart";
 String kMessagingScreen = "/Screens/Settings/messaging.dart";
 String kSignUpScreen = "/Screens/Authorization/sign_up.dart";
 String kSignInScreen = "/Screens/Authorization/sign_in.dart";
 String kNavigationScreen = "/Screens/navigation_bar.dart";
 String kForgotPasswordScreen = "/Screens/Authorization/forgot_password.dart";
- 
 
 ////////// Fonts Size
 double kTenFont = MediaQueryData.fromWindow(WidgetsBinding.instance.window)
