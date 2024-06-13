@@ -13,586 +13,716 @@ class _DashboardState extends State<Dashboard> {
     return Scaffold(
       // drawerEdgeDragWidth: MediaQuery.of(context).size.width / 2,
       backgroundColor: Kwhite,
-      drawer: new Drawer(
+      drawer: Drawer(
         width: MediaQuery.of(context).size.width / 1.2,
         backgroundColor: Kwhite,
-        child: new ListView(
-          padding: const EdgeInsets.all(0.0),
-          children: <Widget>[
-            Container(
-              height: MediaQuery.of(context).size.height / 3.6,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage("assets/images/bg_gradient.png"),
-                  fit: BoxFit.cover,
-                ),
-              ),
-              child: Row(
-                children: [
-                  SizedBox(
-                    width: 30.w,
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                height: MediaQuery.of(context).size.height / 3.6,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/bg_gradient.png"),
+                    fit: BoxFit.cover,
                   ),
-                  CircleAvatar(
-                    backgroundColor: Kwhite,
-                    radius: 35.r,
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(200.r),
-                      child: Image.asset(
-                        "assets/images/user.png",
-                        // height: 150.h,
-                        height: 60.h,
-                        width: 60.w,
-                        fit: BoxFit.cover,
+                ),
+                padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      backgroundColor: Kwhite,
+                      radius: 35.0,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(35.0),
+                        child: Image.asset(
+                          "assets/images/user.png",
+                          height: 70.0,
+                          width: 70.0,
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 30.w,
-                  ),
-                  Text(
-                    "Ram Nayak",
-                    style: TextStyle(
-                        fontSize: kEighteenFont,
-                        fontWeight: kFW400,
-                        color: Kwhite),
-                  ),
-                ],
+                    SizedBox(width: 20.0),
+                    Text(
+                      "Ram Nayak",
+                      style: TextStyle(
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+                        color: Kwhite,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: 40.h,
-            ),
-
-            SizedBox(
-              height: 10.h,
-            ),
-            InkWell(
-              onTap: () {
-                Get.toNamed(kTimerScreen);
-              },
-              child: Container(
-                margin: EdgeInsets.only(left: 15.h, right: 15.w),
-                decoration: BoxDecoration(
+              SizedBox(height: 10.0),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(kTimerScreen);
+                },
+                child: Container(
+                  margin: EdgeInsets.symmetric(horizontal: 15.0),
+                  decoration: BoxDecoration(
                     color: Kwhite,
                     boxShadow: [
                       BoxShadow(
                         color: Ktextcolor.withOpacity(0.2),
                         blurRadius: 1,
-                        offset: const Offset(0, 0),
+                        offset: Offset(0, 0),
                         spreadRadius: 1,
                       )
                     ],
-                    borderRadius: BorderRadius.circular(10.r)),
-                //margin: EdgeInsets.all(13.r),
-                child: ListTile(
-                    visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: ListTile(
                     leading: Image.asset(
                       "assets/images/People.png",
-                      height: 16.h,
+                      height: 16.0,
                     ),
-                    minLeadingWidth: 0,
                     title: Text(
                       "Timer",
-                      style: GoogleFonts.roboto(
-                          fontSize: kFourteenFont,
-                          fontWeight: kFW600,
-                          color: KdarkText),
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.bold,
+                        color: KdarkText,
+                      ),
                     ),
                     trailing: Icon(
                       Icons.keyboard_arrow_right,
                       color: kOrange,
-                      size: 28.sp,
-                    )
-                    // Image.asset(
-                    //   Actions[i]["Subimage"],
-                    //   height: 30.h,
-                    // ),
+                      size: 28.0,
                     ),
+                    visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                    minLeadingWidth: 0,
+                  ),
+                ),
               ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            InkWell(
-              onTap: () {
-                Get.toNamed(kManualTimeScreen);
-              },
-              child: Container(
-                margin: EdgeInsets.only(left: 15.h, right: 15.w),
-                decoration: BoxDecoration(
+              SizedBox(height: 10.0),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(kManualTimeScreen);
+                },
+                child: Container(
+                  margin: EdgeInsets.symmetric(horizontal: 15.0),
+                  decoration: BoxDecoration(
                     color: Kwhite,
                     boxShadow: [
                       BoxShadow(
                         color: Ktextcolor.withOpacity(0.2),
                         blurRadius: 1,
-                        offset: const Offset(0, 0),
+                        offset: Offset(0, 0),
                         spreadRadius: 1,
                       )
                     ],
-                    borderRadius: BorderRadius.circular(10.r)),
-                //margin: EdgeInsets.all(13.r),
-                child: ListTile(
-                    visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  child: ListTile(
                     leading: Image.asset(
                       "assets/images/People.png",
-                      height: 16.h,
+                      height: 16.0,
                     ),
-                    minLeadingWidth: 0,
                     title: Text(
                       "Manual Timer",
-                      style: GoogleFonts.roboto(
-                          fontSize: kFourteenFont,
-                          fontWeight: kFW600,
-                          color: KdarkText),
+                      style: TextStyle(
+                        fontSize: 14.0,
+                        fontWeight: FontWeight.bold,
+                        color: KdarkText,
+                      ),
                     ),
                     trailing: Icon(
                       Icons.keyboard_arrow_right,
                       color: kOrange,
-                      size: 28.sp,
-                    )
-                    // Image.asset(
-                    //   Actions[i]["Subimage"],
-                    //   height: 30.h,
-                    // ),
+                      size: 28.0,
                     ),
-              ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            InkWell(
-              onTap: () {
-                Get.toNamed(kChatScreen);
-              },
-              child: Container(
-                margin: EdgeInsets.only(left: 15.h, right: 15.w),
-                decoration: BoxDecoration(
-                    color: Kwhite,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Ktextcolor.withOpacity(0.2),
-                        blurRadius: 1,
-                        offset: const Offset(0, 0),
-                        spreadRadius: 1,
-                      )
-                    ],
-                    borderRadius: BorderRadius.circular(10.r)),
-                //margin: EdgeInsets.all(13.r),
-                child: ListTile(
                     visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    leading: Image.asset(
-                      "assets/images/chat.png",
-                      color: KText,
-                      height: 16.h,
-                    ),
                     minLeadingWidth: 0,
-                    title: Text(
-                      "Chat",
-                      style: GoogleFonts.roboto(
-                          fontSize: kFourteenFont,
-                          fontWeight: kFW600,
-                          color: KdarkText),
-                    ),
-                    trailing: Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kOrange,
-                      size: 28.sp,
-                    )
-                    // Image.asset(
-                    //   Actions[i]["Subimage"],
-                    //   height: 30.h,
-                    // ),
-                    ),
+                  ),
+                ),
               ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            InkWell(
-              onTap: () {
-                Get.toNamed(kNewChatScreen);
-              },
-              child: Container(
-                margin: EdgeInsets.only(left: 15.h, right: 15.w),
-                decoration: BoxDecoration(
-                    color: Kwhite,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Ktextcolor.withOpacity(0.2),
-                        blurRadius: 1,
-                        offset: const Offset(0, 0),
-                        spreadRadius: 1,
+              SizedBox(
+                height: 10.h,
+              ),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(kTimerScreen);
+                },
+                child: Container(
+                  margin: EdgeInsets.only(left: 15.h, right: 15.w),
+                  decoration: BoxDecoration(
+                      color: Kwhite,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Ktextcolor.withOpacity(0.2),
+                          blurRadius: 1,
+                          offset: const Offset(0, 0),
+                          spreadRadius: 1,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(10.r)),
+                  //margin: EdgeInsets.all(13.r),
+                  child: ListTile(
+                      visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                      leading: Image.asset(
+                        "assets/images/People.png",
+                        height: 16.h,
+                      ),
+                      minLeadingWidth: 0,
+                      title: Text(
+                        "Timer",
+                        style: GoogleFonts.roboto(
+                            fontSize: kFourteenFont,
+                            fontWeight: kFW600,
+                            color: KdarkText),
+                      ),
+                      trailing: Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kOrange,
+                        size: 28.sp,
                       )
-                    ],
-                    borderRadius: BorderRadius.circular(10.r)),
-                //margin: EdgeInsets.all(13.r),
-                child: ListTile(
-                    visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    leading: Image.asset(
-                      "assets/images/chat.png",
-                      color: KText,
-                      height: 16.h,
-                    ),
-                    minLeadingWidth: 0,
-                    title: Text(
-                      "New Chat",
-                      style: GoogleFonts.roboto(
-                          fontSize: kFourteenFont,
-                          fontWeight: kFW600,
-                          color: KdarkText),
-                    ),
-                    trailing: Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kOrange,
-                      size: 28.sp,
-                    )
-                    // Image.asset(
-                    //   Actions[i]["Subimage"],
-                    //   height: 30.h,
-                    // ),
-                    ),
+                      // Image.asset(
+                      //   Actions[i]["Subimage"],
+                      //   height: 30.h,
+                      // ),
+                      ),
+                ),
               ),
-            ),
-            // SizedBox(
-            //   height: 10.h,
-            // ),
-            // InkWell(
-            //   onTap: () {
-            //     Get.toNamed(kProfileScreen);
-            //   },
-            //   child: Container(
-            //     margin: EdgeInsets.only(left: 15.h, right: 15.w),
-            //     decoration: BoxDecoration(
-            //         color: Kwhite,
-            //         boxShadow: [
-            //           BoxShadow(
-            //             color: Ktextcolor.withOpacity(0.2),
-            //             blurRadius: 1,
-            //             offset: const Offset(0, 0),
-            //             spreadRadius: 1,
-            //           )
-            //         ],
-            //         borderRadius: BorderRadius.circular(10.r)),
-            //     //margin: EdgeInsets.all(13.r),
-            //     child: ListTile(
-            //         visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-            //         leading: Image.asset(
-            //           "assets/images/chat.png",
-            //           color: KText,
-            //           height: 16.h,
-            //         ),
-            //         minLeadingWidth: 0,
-            //         title: Text(
-            //           "Profile",
-            //           style: GoogleFonts.roboto(
-            //               fontSize: kFourteenFont,
-            //               fontWeight: kFW600,
-            //               color: KdarkText),
-            //         ),
-            //         trailing: Icon(
-            //           Icons.keyboard_arrow_right,
-            //           color: kOrange,
-            //           size: 28.sp,
-            //         )
-            //         // Image.asset(
-            //         //   Actions[i]["Subimage"],
-            //         //   height: 30.h,
-            //         // ),
-            //         ),
-            //   ),
-            // ),
+              SizedBox(
+                height: 10.h,
+              ),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(kManualTimeScreen);
+                },
+                child: Container(
+                  margin: EdgeInsets.only(left: 15.h, right: 15.w),
+                  decoration: BoxDecoration(
+                      color: Kwhite,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Ktextcolor.withOpacity(0.2),
+                          blurRadius: 1,
+                          offset: const Offset(0, 0),
+                          spreadRadius: 1,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(10.r)),
+                  //margin: EdgeInsets.all(13.r),
+                  child: ListTile(
+                      visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                      leading: Image.asset(
+                        "assets/images/People.png",
+                        height: 16.h,
+                      ),
+                      minLeadingWidth: 0,
+                      title: Text(
+                        "Manual Timer",
+                        style: GoogleFonts.roboto(
+                            fontSize: kFourteenFont,
+                            fontWeight: kFW600,
+                            color: KdarkText),
+                      ),
+                      trailing: Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kOrange,
+                        size: 28.sp,
+                      )
+                      // Image.asset(
+                      //   Actions[i]["Subimage"],
+                      //   height: 30.h,
+                      // ),
+                      ),
+                ),
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(kChatScreen);
+                },
+                child: Container(
+                  margin: EdgeInsets.only(left: 15.h, right: 15.w),
+                  decoration: BoxDecoration(
+                      color: Kwhite,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Ktextcolor.withOpacity(0.2),
+                          blurRadius: 1,
+                          offset: const Offset(0, 0),
+                          spreadRadius: 1,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(10.r)),
+                  //margin: EdgeInsets.all(13.r),
+                  child: ListTile(
+                      visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                      leading: Image.asset(
+                        "assets/images/chat.png",
+                        color: KText,
+                        height: 16.h,
+                      ),
+                      minLeadingWidth: 0,
+                      title: Text(
+                        "Chat",
+                        style: GoogleFonts.roboto(
+                            fontSize: kFourteenFont,
+                            fontWeight: kFW600,
+                            color: KdarkText),
+                      ),
+                      trailing: Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kOrange,
+                        size: 28.sp,
+                      )
+                      // Image.asset(
+                      //   Actions[i]["Subimage"],
+                      //   height: 30.h,
+                      // ),
+                      ),
+                ),
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(kNewChatScreen);
+                },
+                child: Container(
+                  margin: EdgeInsets.only(left: 15.h, right: 15.w),
+                  decoration: BoxDecoration(
+                      color: Kwhite,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Ktextcolor.withOpacity(0.2),
+                          blurRadius: 1,
+                          offset: const Offset(0, 0),
+                          spreadRadius: 1,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(10.r)),
+                  //margin: EdgeInsets.all(13.r),
+                  child: ListTile(
+                      visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                      leading: Image.asset(
+                        "assets/images/chat.png",
+                        color: KText,
+                        height: 16.h,
+                      ),
+                      minLeadingWidth: 0,
+                      title: Text(
+                        "New Chat",
+                        style: GoogleFonts.roboto(
+                            fontSize: kFourteenFont,
+                            fontWeight: kFW600,
+                            color: KdarkText),
+                      ),
+                      trailing: Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kOrange,
+                        size: 28.sp,
+                      )
+                      // Image.asset(
+                      //   Actions[i]["Subimage"],
+                      //   height: 30.h,
+                      // ),
+                      ),
+                ),
+              ),
+              // SizedBox(
+              //   height: 10.h,
+              // ),
+              // InkWell(
+              //   onTap: () {
+              //     Get.toNamed(kProfileScreen);
+              //   },
+              //   child: Container(
+              //     margin: EdgeInsets.only(left: 15.h, right: 15.w),
+              //     decoration: BoxDecoration(
+              //         color: Kwhite,
+              //         boxShadow: [
+              //           BoxShadow(
+              //             color: Ktextcolor.withOpacity(0.2),
+              //             blurRadius: 1,
+              //             offset: const Offset(0, 0),
+              //             spreadRadius: 1,
+              //           )
+              //         ],
+              //         borderRadius: BorderRadius.circular(10.r)),
+              //     //margin: EdgeInsets.all(13.r),
+              //     child: ListTile(
+              //         visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+              //         leading: Image.asset(
+              //           "assets/images/chat.png",
+              //           color: KText,
+              //           height: 16.h,
+              //         ),
+              //         minLeadingWidth: 0,
+              //         title: Text(
+              //           "Profile",
+              //           style: GoogleFonts.roboto(
+              //               fontSize: kFourteenFont,
+              //               fontWeight: kFW600,
+              //               color: KdarkText),
+              //         ),
+              //         trailing: Icon(
+              //           Icons.keyboard_arrow_right,
+              //           color: kOrange,
+              //           size: 28.sp,
+              //         )
+              //         // Image.asset(
+              //         //   Actions[i]["Subimage"],
+              //         //   height: 30.h,
+              //         // ),
+              //         ),
+              //   ),
+              // ),
 
-            SizedBox(
-              height: 10.h,
-            ),
-            InkWell(
-              onTap: () {
-                Get.toNamed(kSettingsScreen);
-              },
-              child: Container(
-                margin: EdgeInsets.only(left: 15.h, right: 15.w),
-                decoration: BoxDecoration(
-                    color: Kwhite,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Ktextcolor.withOpacity(0.2),
-                        blurRadius: 1,
-                        offset: const Offset(0, 0),
-                        spreadRadius: 1,
-                      )
-                    ],
-                    borderRadius: BorderRadius.circular(10.r)),
-                //margin: EdgeInsets.all(13.r),
-                child: ListTile(
-                    visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    leading: Image.asset(
-                      "assets/images/settings2.png",
-                      color: KText,
-                      height: 16.h,
-                    ),
-                    minLeadingWidth: 0,
-                    title: Text(
-                      "Settings",
-                      style: GoogleFonts.roboto(
-                          fontSize: kFourteenFont,
-                          fontWeight: kFW600,
-                          color: KdarkText),
-                    ),
-                    trailing: Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kOrange,
-                      size: 28.sp,
-                    )
-                    // Image.asset(
-                    //   Actions[i]["Subimage"],
-                    //   height: 30.h,
-                    // ),
-                    ),
+              SizedBox(
+                height: 10.h,
               ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            InkWell(
-              onTap: () {
-                Get.toNamed(kFeedbackScreen);
-              },
-              child: Container(
-                margin: EdgeInsets.only(left: 15.h, right: 15.w),
-                decoration: BoxDecoration(
-                    color: Kwhite,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Ktextcolor.withOpacity(0.2),
-                        blurRadius: 1,
-                        offset: const Offset(0, 0),
-                        spreadRadius: 1,
+              InkWell(
+                onTap: () {
+                  Get.toNamed(kSettingsScreen);
+                },
+                child: Container(
+                  margin: EdgeInsets.only(left: 15.h, right: 15.w),
+                  decoration: BoxDecoration(
+                      color: Kwhite,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Ktextcolor.withOpacity(0.2),
+                          blurRadius: 1,
+                          offset: const Offset(0, 0),
+                          spreadRadius: 1,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(10.r)),
+                  //margin: EdgeInsets.all(13.r),
+                  child: ListTile(
+                      visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                      leading: Image.asset(
+                        "assets/images/settings2.png",
+                        color: KText,
+                        height: 16.h,
+                      ),
+                      minLeadingWidth: 0,
+                      title: Text(
+                        "Settings",
+                        style: GoogleFonts.roboto(
+                            fontSize: kFourteenFont,
+                            fontWeight: kFW600,
+                            color: KdarkText),
+                      ),
+                      trailing: Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kOrange,
+                        size: 28.sp,
                       )
-                    ],
-                    borderRadius: BorderRadius.circular(10.r)),
-                //margin: EdgeInsets.all(13.r),
-                child: ListTile(
-                    visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    leading: Image.asset(
-                      "assets/images/chat.png",
-                      color: KText,
-                      height: 16.h,
-                    ),
-                    minLeadingWidth: 0,
-                    title: Text(
-                      "Feedback",
-                      style: GoogleFonts.roboto(
-                          fontSize: kFourteenFont,
-                          fontWeight: kFW600,
-                          color: KdarkText),
-                    ),
-                    trailing: Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kOrange,
-                      size: 28.sp,
-                    )
-                    // Image.asset(
-                    //   Actions[i]["Subimage"],
-                    //   height: 30.h,
-                    // ),
-                    ),
+                      // Image.asset(
+                      //   Actions[i]["Subimage"],
+                      //   height: 30.h,
+                      // ),
+                      ),
+                ),
               ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            InkWell(
-              onTap: () {
-                Get.toNamed(kApplyLeaveScreen);
-              },
-              child: Container(
-                margin: EdgeInsets.only(left: 15.h, right: 15.w),
-                decoration: BoxDecoration(
-                    color: Kwhite,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Ktextcolor.withOpacity(0.2),
-                        blurRadius: 1,
-                        offset: const Offset(0, 0),
-                        spreadRadius: 1,
+              SizedBox(
+                height: 10.h,
+              ),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(kFeedbackScreen);
+                },
+                child: Container(
+                  margin: EdgeInsets.only(left: 15.h, right: 15.w),
+                  decoration: BoxDecoration(
+                      color: Kwhite,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Ktextcolor.withOpacity(0.2),
+                          blurRadius: 1,
+                          offset: const Offset(0, 0),
+                          spreadRadius: 1,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(10.r)),
+                  //margin: EdgeInsets.all(13.r),
+                  child: ListTile(
+                      visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                      leading: Image.asset(
+                        "assets/images/chat.png",
+                        color: KText,
+                        height: 16.h,
+                      ),
+                      minLeadingWidth: 0,
+                      title: Text(
+                        "Feedback",
+                        style: GoogleFonts.roboto(
+                            fontSize: kFourteenFont,
+                            fontWeight: kFW600,
+                            color: KdarkText),
+                      ),
+                      trailing: Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kOrange,
+                        size: 28.sp,
                       )
-                    ],
-                    borderRadius: BorderRadius.circular(10.r)),
-                //margin: EdgeInsets.all(13.r),
-                child: ListTile(
-                    visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    leading: Image.asset(
-                      "assets/images/apply_leave.png",
-                      // color: KText,
-                      height: 16.h,
-                    ),
-                    minLeadingWidth: 0,
-                    title: Text(
-                      "Apply Leave",
-                      style: GoogleFonts.roboto(
-                          fontSize: kFourteenFont,
-                          fontWeight: kFW600,
-                          color: KdarkText),
-                    ),
-                    trailing: Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kOrange,
-                      size: 28.sp,
-                    )
-                    // Image.asset(
-                    //   Actions[i]["Subimage"],
-                    //   height: 30.h,
-                    // ),
-                    ),
+                      // Image.asset(
+                      //   Actions[i]["Subimage"],
+                      //   height: 30.h,
+                      // ),
+                      ),
+                ),
               ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            InkWell(
-              onTap: () {
-                Get.toNamed(kQuizhome);
-              },
-              child: Container(
-                margin: EdgeInsets.only(left: 15.h, right: 15.w),
-                decoration: BoxDecoration(
-                    color: Kwhite,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Ktextcolor.withOpacity(0.2),
-                        blurRadius: 1,
-                        offset: const Offset(0, 0),
-                        spreadRadius: 1,
+              SizedBox(
+                height: 10.h,
+              ),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(kApplyLeaveScreen);
+                },
+                child: Container(
+                  margin: EdgeInsets.only(left: 15.h, right: 15.w),
+                  decoration: BoxDecoration(
+                      color: Kwhite,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Ktextcolor.withOpacity(0.2),
+                          blurRadius: 1,
+                          offset: const Offset(0, 0),
+                          spreadRadius: 1,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(10.r)),
+                  //margin: EdgeInsets.all(13.r),
+                  child: ListTile(
+                      visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                      leading: Image.asset(
+                        "assets/images/apply_leave.png",
+                        // color: KText,
+                        height: 16.h,
+                      ),
+                      minLeadingWidth: 0,
+                      title: Text(
+                        "Apply Leave",
+                        style: GoogleFonts.roboto(
+                            fontSize: kFourteenFont,
+                            fontWeight: kFW600,
+                            color: KdarkText),
+                      ),
+                      trailing: Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kOrange,
+                        size: 28.sp,
                       )
-                    ],
-                    borderRadius: BorderRadius.circular(10.r)),
-                //margin: EdgeInsets.all(13.r),
-                child: ListTile(
-                    visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    leading: Image.asset(
-                      "assets/images/attendance.png",
-                      color: KText,
-                      height: 16.h,
-                    ),
-                    minLeadingWidth: 0,
-                    title: Text(
-                      "Quiz",
-                      style: GoogleFonts.roboto(
-                          fontSize: kFourteenFont,
-                          fontWeight: kFW600,
-                          color: KdarkText),
-                    ),
-                    trailing: Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kOrange,
-                      size: 28.sp,
-                    )
-                    // Image.asset(
-                    //   Actions[i]["Subimage"],
-                    //   height: 30.h,
-                    // ),
-                    ),
+                      // Image.asset(
+                      //   Actions[i]["Subimage"],
+                      //   height: 30.h,
+                      // ),
+                      ),
+                ),
               ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            InkWell(
-              onTap: () {
-                Get.toNamed(kHolidayScreen);
-              },
-              child: Container(
-                margin: EdgeInsets.only(left: 15.h, right: 15.w),
-                decoration: BoxDecoration(
-                    color: Kwhite,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Ktextcolor.withOpacity(0.2),
-                        blurRadius: 1,
-                        offset: const Offset(0, 0),
-                        spreadRadius: 1,
+              SizedBox(
+                height: 10.h,
+              ),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(kQuizhome);
+                },
+                child: Container(
+                  margin: EdgeInsets.only(left: 15.h, right: 15.w),
+                  decoration: BoxDecoration(
+                      color: Kwhite,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Ktextcolor.withOpacity(0.2),
+                          blurRadius: 1,
+                          offset: const Offset(0, 0),
+                          spreadRadius: 1,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(10.r)),
+                  //margin: EdgeInsets.all(13.r),
+                  child: ListTile(
+                      visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                      leading: Image.asset(
+                        "assets/images/attendance.png",
+                        color: KText,
+                        height: 16.h,
+                      ),
+                      minLeadingWidth: 0,
+                      title: Text(
+                        "Quiz",
+                        style: GoogleFonts.roboto(
+                            fontSize: kFourteenFont,
+                            fontWeight: kFW600,
+                            color: KdarkText),
+                      ),
+                      trailing: Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kOrange,
+                        size: 28.sp,
                       )
-                    ],
-                    borderRadius: BorderRadius.circular(10.r)),
-                //margin: EdgeInsets.all(13.r),
-                child: ListTile(
-                    visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    leading: Image.asset(
-                      "assets/images/attendance.png",
-                      color: KText,
-                      height: 16.h,
-                    ),
-                    minLeadingWidth: 0,
-                    title: Text(
-                      "Holidays List",
-                      style: GoogleFonts.roboto(
-                          fontSize: kFourteenFont,
-                          fontWeight: kFW600,
-                          color: KdarkText),
-                    ),
-                    trailing: Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kOrange,
-                      size: 28.sp,
-                    )
-                    // Image.asset(
-                    //   Actions[i]["Subimage"],
-                    //   height: 30.h,
-                    // ),
-                    ),
+                      // Image.asset(
+                      //   Actions[i]["Subimage"],
+                      //   height: 30.h,
+                      // ),
+                      ),
+                ),
               ),
-            ),
-            SizedBox(
-              height: 10.h,
-            ),
-            InkWell(
-              onTap: () {
-                Get.toNamed(kCourseScreen);
-              },
-              child: Container(
-                margin: EdgeInsets.only(left: 15.h, right: 15.w),
-                decoration: BoxDecoration(
-                    color: Kwhite,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Ktextcolor.withOpacity(0.2),
-                        blurRadius: 1,
-                        offset: const Offset(0, 0),
-                        spreadRadius: 1,
+              SizedBox(
+                height: 10.h,
+              ),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(kHolidayScreen);
+                },
+                child: Container(
+                  margin: EdgeInsets.only(left: 15.h, right: 15.w),
+                  decoration: BoxDecoration(
+                      color: Kwhite,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Ktextcolor.withOpacity(0.2),
+                          blurRadius: 1,
+                          offset: const Offset(0, 0),
+                          spreadRadius: 1,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(10.r)),
+                  //margin: EdgeInsets.all(13.r),
+                  child: ListTile(
+                      visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                      leading: Image.asset(
+                        "assets/images/attendance.png",
+                        color: KText,
+                        height: 16.h,
+                      ),
+                      minLeadingWidth: 0,
+                      title: Text(
+                        "Holidays List",
+                        style: GoogleFonts.roboto(
+                            fontSize: kFourteenFont,
+                            fontWeight: kFW600,
+                            color: KdarkText),
+                      ),
+                      trailing: Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kOrange,
+                        size: 28.sp,
                       )
-                    ],
-                    borderRadius: BorderRadius.circular(10.r)),
-                //margin: EdgeInsets.all(13.r),
-                child: ListTile(
-                    visualDensity: VisualDensity(horizontal: 0, vertical: -4),
-                    leading: Image.asset(
-                      "assets/images/attendance.png",
-                      color: KText,
-                      height: 16.h,
-                    ),
-                    minLeadingWidth: 0,
-                    title: Text(
-                      "Courses",
-                      style: GoogleFonts.roboto(
-                          fontSize: kFourteenFont,
-                          fontWeight: kFW600,
-                          color: KdarkText),
-                    ),
-                    trailing: Icon(
-                      Icons.keyboard_arrow_right,
-                      color: kOrange,
-                      size: 28.sp,
-                    )
-                    // Image.asset(
-                    //   Actions[i]["Subimage"],
-                    //   height: 30.h,
-                    // ),
-                    ),
+                      // Image.asset(
+                      //   Actions[i]["Subimage"],
+                      //   height: 30.h,
+                      // ),
+                      ),
+                ),
               ),
-            ),
-          ],
+              SizedBox(
+                height: 10.h,
+              ),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(kCourseScreen);
+                },
+                child: Container(
+                  margin: EdgeInsets.only(left: 15.h, right: 15.w),
+                  decoration: BoxDecoration(
+                      color: Kwhite,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Ktextcolor.withOpacity(0.2),
+                          blurRadius: 1,
+                          offset: const Offset(0, 0),
+                          spreadRadius: 1,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(10.r)),
+                  //margin: EdgeInsets.all(13.r),
+                  child: ListTile(
+                      visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                      leading: Image.asset(
+                        "assets/images/attendance.png",
+                        color: KText,
+                        height: 16.h,
+                      ),
+                      minLeadingWidth: 0,
+                      title: Text(
+                        "Courses",
+                        style: GoogleFonts.roboto(
+                            fontSize: kFourteenFont,
+                            fontWeight: kFW600,
+                            color: KdarkText),
+                      ),
+                      trailing: Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kOrange,
+                        size: 28.sp,
+                      )
+                      // Image.asset(
+                      //   Actions[i]["Subimage"],
+                      //   height: 30.h,
+                      // ),
+                      ),
+                ),
+              ),
+              SizedBox(
+                height: 10.h,
+              ),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(kAttendaceScreen);
+                },
+                child: Container(
+                  margin: EdgeInsets.only(left: 15.h, right: 15.w),
+                  decoration: BoxDecoration(
+                      color: Kwhite,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Ktextcolor.withOpacity(0.2),
+                          blurRadius: 1,
+                          offset: const Offset(0, 0),
+                          spreadRadius: 1,
+                        )
+                      ],
+                      borderRadius: BorderRadius.circular(10.r)),
+                  //margin: EdgeInsets.all(13.r),
+                  child: ListTile(
+                      visualDensity: VisualDensity(horizontal: 0, vertical: -4),
+                      leading: Image.asset(
+                        "assets/images/attendance.png",
+                        color: KText,
+                        height: 16.h,
+                      ),
+                      minLeadingWidth: 0,
+                      title: Text(
+                        "Attendance",
+                        style: GoogleFonts.roboto(
+                            fontSize: kFourteenFont,
+                            fontWeight: kFW600,
+                            color: KdarkText),
+                      ),
+                      trailing: Icon(
+                        Icons.keyboard_arrow_right,
+                        color: kOrange,
+                        size: 28.sp,
+                      )
+                      // Image.asset(
+                      //   Actions[i]["Subimage"],
+                      //   height: 30.h,
+                      // ),
+                      ),
+                ),
+              ),
+              SizedBox(
+                height: 100.h,
+              ),
+            ],
+          ),
         ),
       ),
+
       drawerEnableOpenDragGesture: false,
 
       appBar: AppBar(

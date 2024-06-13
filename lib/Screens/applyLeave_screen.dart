@@ -16,54 +16,54 @@ class _ApplyLeaveState extends State<ApplyLeave> {
     'Casual Leave',
     'Paid Leave',
   ];
-  final List<String> projects = [
-    'E Commerce',
-    'Hotel App',
-    'Devastanam app',
-  ];
+  // final List<String> projects = [
+  //   'E Commerce',
+  //   'Hotel App',
+  //   'Devastanam app',
+  // ];
 
-  final List<String> tasks = [
-    'Design',
-    'Api Integration',
-    'Deployment',
-  ];
+  // final List<String> tasks = [
+  //   'Design',
+  //   'Api Integration',
+  //   'Deployment',
+  // ];
 
-  String? selectedValue;
-  String? selectedGenderValue;
-  String? selectedProjectvalue;
-  String? selectedTaskvalue;
-  List days = [
-    {
-      "title": "Custom",
-      // "subtitle":
-      //     "World Blood Donor Day is held on June 14 each year. The event was organised for the first time in 2004, by four core international organizations: the World Health Organization,",
-      // "image": "assets/images/feeds1.jpg",
-    },
-    {
-      "title": "This week",
-      // "subtitle":
-      //     "reduce stress ,improve your emotional well-being ,help get rid of negative feelings",
-      // "image": "assets/images/feeds2.jpg",
-    },
-    {
-      "title": "This week",
-      // "subtitle":
-      //     "Donating blood is healthy as it allows your body to renew the blood within a few weeks",
-      // "image": "assets/images/feeds3.png",
-    },
-    {
-      "title": "Last month",
-      // "subtitle":
-      //     "Donating blood is healthy as it allows your body to renew the blood within a few weeks",
-      // "image": "assets/images/feeds3.png",
-    },
-    {
-      "title": "This month",
-      // "subtitle":
-      //     "Donating blood is healthy as it allows your body to renew the blood within a few weeks",
-      // "image": "assets/images/feeds3.png",
-    },
-  ];
+  // String? selectedValue;
+  String? selectedLeave;
+  // String? selectedProjectvalue;
+  // String? selectedTaskvalue;
+  // List days = [
+  //   {
+  //     "title": "Custom",
+  //     // "subtitle":
+  //     //     "World Blood Donor Day is held on June 14 each year. The event was organised for the first time in 2004, by four core international organizations: the World Health Organization,",
+  //     // "image": "assets/images/feeds1.jpg",
+  //   },
+  //   {
+  //     "title": "This week",
+  //     // "subtitle":
+  //     //     "reduce stress ,improve your emotional well-being ,help get rid of negative feelings",
+  //     // "image": "assets/images/feeds2.jpg",
+  //   },
+  //   {
+  //     "title": "This week",
+  //     // "subtitle":
+  //     //     "Donating blood is healthy as it allows your body to renew the blood within a few weeks",
+  //     // "image": "assets/images/feeds3.png",
+  //   },
+  //   {
+  //     "title": "Last month",
+  //     // "subtitle":
+  //     //     "Donating blood is healthy as it allows your body to renew the blood within a few weeks",
+  //     // "image": "assets/images/feeds3.png",
+  //   },
+  //   {
+  //     "title": "This month",
+  //     // "subtitle":
+  //     //     "Donating blood is healthy as it allows your body to renew the blood within a few weeks",
+  //     // "image": "assets/images/feeds3.png",
+  //   },
+  // ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -161,14 +161,14 @@ class _ApplyLeaveState extends State<ApplyLeave> {
                       )).toList(),
                   validator: (value) {
                     if (value == null) {
-                      return 'Please select Gender.';
+                      return 'Please select Leave.';
                     }
                     return null;
                   },
                   onChanged: (value) {
                     setState(() {
-                      selectedGenderValue = value.toString();
-                      print(selectedGenderValue);
+                      selectedLeave = value.toString();
+                      print(selectedLeave);
                     });
 
                     // authentication.registerDonorBloodController.value =

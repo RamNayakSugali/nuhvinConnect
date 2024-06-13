@@ -31,108 +31,110 @@ class _TimerScreenState extends State<TimerScreen> {
       ),
       body: Container(
         margin: EdgeInsets.all(16.r),
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  "Today",
-                  style: GoogleFonts.roboto(
-                      fontSize: 20.sp, color: KdarkText, fontWeight: kFW400),
-                ),
-                Text(
-                  "00m 00s",
-                  style: GoogleFonts.roboto(
-                      fontSize: 20.sp, color: KdarkText, fontWeight: kFW400),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 30.h,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: [
-                    Container(
-                        width: 35.w,
-                        padding: EdgeInsets.all(10.r),
-                        alignment: Alignment.center,
-                        decoration: BoxDecoration(
-                          color: kBackGroundWhite,
-                          borderRadius: BorderRadius.circular(5.r),
-                          boxShadow: [
-                            BoxShadow(
-                              spreadRadius: 0.1,
-                              blurRadius: 0.1,
-                              offset: const Offset(0, 2),
-                              color: Ktextcolor.withOpacity(0.25),
-                            )
-                          ],
-                        ),
-                        child: Text(
-                          "C",
-                          style: GoogleFonts.roboto(
-                              fontSize: 13.sp,
-                              color: Kwhite,
-                              fontWeight: kFW500),
-                        )),
-                    SizedBox(
-                      width: 8.w,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Today",
+                    style: GoogleFonts.roboto(
+                        fontSize: 20.sp, color: KdarkText, fontWeight: kFW400),
+                  ),
+                  Text(
+                    "00m 00s",
+                    style: GoogleFonts.roboto(
+                        fontSize: 20.sp, color: KdarkText, fontWeight: kFW400),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 30.h,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                          width: 35.w,
+                          padding: EdgeInsets.all(10.r),
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            color: kBackGroundWhite,
+                            borderRadius: BorderRadius.circular(5.r),
+                            boxShadow: [
+                              BoxShadow(
+                                spreadRadius: 0.1,
+                                blurRadius: 0.1,
+                                offset: const Offset(0, 2),
+                                color: Ktextcolor.withOpacity(0.25),
+                              )
+                            ],
+                          ),
+                          child: Text(
+                            "C",
+                            style: GoogleFonts.roboto(
+                                fontSize: 13.sp,
+                                color: Kwhite,
+                                fontWeight: kFW500),
+                          )),
+                      SizedBox(
+                        width: 8.w,
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Default",
+                            style: GoogleFonts.roboto(
+                                fontSize: kSixteenFont,
+                                color: KdarkText,
+                                fontWeight: kFW400),
+                          ),
+                          Text(
+                            "Default",
+                            style: GoogleFonts.roboto(
+                                fontSize: 11.sp,
+                                color: KlightText,
+                                fontWeight: kFW400),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  Text(
+                    "00m 00s",
+                    style: GoogleFonts.roboto(
+                        fontSize: kSixteenFont,
+                        color: KdarkText,
+                        fontWeight: kFW400),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 200.h,
+              ),
+              InkWell(
+                onTap: () {
+                  Get.toNamed(kStartScreen);
+                },
+                child: CircleAvatar(
+                  backgroundColor: Kwhite,
+                  radius: 50.r,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(200.r),
+                    child: Image.asset(
+                      "assets/images/play.png",
+                      fit: BoxFit.cover,
                     ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Default",
-                          style: GoogleFonts.roboto(
-                              fontSize: kSixteenFont,
-                              color: KdarkText,
-                              fontWeight: kFW400),
-                        ),
-                        Text(
-                          "Default",
-                          style: GoogleFonts.roboto(
-                              fontSize: 11.sp,
-                              color: KlightText,
-                              fontWeight: kFW400),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-                Text(
-                  "00m 00s",
-                  style: GoogleFonts.roboto(
-                      fontSize: kSixteenFont,
-                      color: KdarkText,
-                      fontWeight: kFW400),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 200.h,
-            ),
-            InkWell(
-              onTap: () {
-                Get.toNamed(kStartScreen);
-              },
-              child: CircleAvatar(
-                backgroundColor: Kwhite,
-                radius: 50.r,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(200.r),
-                  child: Image.asset(
-                    "assets/images/play.png",
-                    fit: BoxFit.cover,
                   ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

@@ -34,7 +34,7 @@ class _HolidayslistState extends State<Holidayslist> {
             margin: EdgeInsets.all(15.w),
             child: ListView.builder(
                 itemCount: 20,
-                shrinkWrap: true,
+                //   shrinkWrap: true,
                 physics: AlwaysScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
                   return Container(
