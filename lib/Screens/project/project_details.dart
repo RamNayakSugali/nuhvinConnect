@@ -59,10 +59,18 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Project ID : 240501"),
+                        Text(
+                          "Project ID : 240501",
+                          style: GoogleFonts.roboto(
+                              fontSize: 15.sp, fontWeight: FontWeight.w500),
+                        ),
                         Row(
                           children: [
-                            Text("Status: "),
+                            Text(
+                              "Status: ",
+                              style: GoogleFonts.roboto(
+                                  fontSize: 15.sp, fontWeight: FontWeight.w500),
+                            ),
                             Container(
                               decoration: BoxDecoration(
                                 color: Colors.yellow,
@@ -82,21 +90,37 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                     SizedBox(
                       height: 10.h,
                     ),
-                    Text("Project Name : NBB Responsive Website"),
+                    Text(
+                      "Project Name : NBB Responsive Website",
+                      style: GoogleFonts.roboto(
+                          fontSize: 15.sp, fontWeight: FontWeight.w500),
+                    ),
                     SizedBox(
                       height: 10.h,
                     ),
-                    Text("Project Name : NBB Responsive Website"),
+                    Text(
+                      "Project Name : NBB Responsive Website",
+                      style: GoogleFonts.roboto(
+                          fontSize: 15.sp, fontWeight: FontWeight.w500),
+                    ),
                     SizedBox(
                       height: 10.h,
                     ),
-                    Text("Start Date : 10 June 2024"),
+                    Text(
+                      "Start Date : 10 June 2024",
+                      style: GoogleFonts.roboto(
+                          fontSize: 15.sp, fontWeight: FontWeight.w500),
+                    ),
                     SizedBox(
                       height: 10.h,
                     ),
                     Row(
                       children: [
-                        Text("Completion :"),
+                        Text(
+                          "Completion :",
+                          style: GoogleFonts.roboto(
+                              fontSize: 15.sp, fontWeight: FontWeight.w500),
+                        ),
                         SizedBox(
                           width: 10.w,
                         ),
@@ -136,8 +160,13 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Created : "),
+                        Text(
+                          "Created : ",
+                          style: GoogleFonts.roboto(
+                              fontSize: 15.sp, fontWeight: FontWeight.w500),
+                        ),
                         Container(
+                          padding: EdgeInsets.all(3.w),
                           color: kOrange,
                           child: Text(
                             "14/7/2024",
@@ -146,12 +175,20 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                         )
                       ],
                     ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Deadline : "),
+                        Text(
+                          "Deadline : ",
+                          style: GoogleFonts.roboto(
+                              fontSize: 15.sp, fontWeight: FontWeight.w500),
+                        ),
                         Container(
-                          color: kOrange,
+                          padding: EdgeInsets.all(3.w),
+                          color: kyellow,
                           child: Text(
                             "12/12/2024",
                             style: GoogleFonts.roboto(color: Kwhite),
@@ -159,12 +196,20 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                         )
                       ],
                     ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Priority : "),
+                        Text(
+                          "Priority : ",
+                          style: GoogleFonts.roboto(
+                              fontSize: 15.sp, fontWeight: FontWeight.w500),
+                        ),
                         Container(
-                          color: kOrange,
+                          padding: EdgeInsets.all(3.w),
+                          color: Colors.blue,
                           child: Text(
                             "Highest Priority",
                             style: GoogleFonts.roboto(color: Kwhite),
@@ -172,12 +217,20 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                         )
                       ],
                     ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text("Status : "),
+                        Text(
+                          "Status : ",
+                          style: GoogleFonts.roboto(
+                              fontSize: 15.sp, fontWeight: FontWeight.w500),
+                        ),
                         Container(
-                          color: kOrange,
+                          padding: EdgeInsets.all(3.w),
+                          color: Colors.green,
                           child: Text(
                             "working",
                             style: GoogleFonts.roboto(color: Kwhite),
@@ -209,7 +262,11 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Assigned Team"),
+                      Text(
+                        "Assigned Team",
+                        style: GoogleFonts.roboto(
+                            fontSize: 16.sp, fontWeight: FontWeight.w500),
+                      ),
                       SizedBox(
                         height: 10.h,
                       ),
@@ -229,7 +286,12 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Parvati"),
+                              Text(
+                                "Parvati",
+                                style: GoogleFonts.roboto(
+                                    fontSize: 15.sp,
+                                    fontWeight: FontWeight.w500),
+                              ),
                               Text("xyz@gmail.com"),
                               Text("Team Lead"),
                             ],
@@ -266,7 +328,12 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text("Ram Nayak"),
+                                  Text(
+                                    "Ram Nayak",
+                                    style: GoogleFonts.roboto(
+                                        fontSize: 15.sp,
+                                        fontWeight: FontWeight.w500),
+                                  ),
                                   Text("xyz@gmail.com"),
                                 ],
                               ),
@@ -297,7 +364,12 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                               Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text("Vinay"),
+                                  Text(
+                                    "Vinay",
+                                    style: GoogleFonts.roboto(
+                                        fontSize: 15.sp,
+                                        fontWeight: FontWeight.w500),
+                                  ),
                                   Text("xyz@gmail.com"),
                                 ],
                               ),
@@ -328,9 +400,62 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                 ),
                 child: Column(
                   children: [
-                    Text(
-                      "About Client",
+                    Row(
+                      children: [
+                        Text(
+                          "About Client",
+                          style: GoogleFonts.roboto(
+                              fontSize: 16.sp, fontWeight: FontWeight.w500),
+                        ),
+                      ],
                     ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    CircleAvatar(
+                      radius: 40.r,
+                      backgroundColor: kOrange,
+                      child: Text(
+                        "image",
+                        style: GoogleFonts.roboto(color: Kwhite),
+                      ),
+                    ),
+                    Text(
+                      "Parvati",
+                      style: GoogleFonts.roboto(
+                          fontSize: 17.sp, fontWeight: FontWeight.w500),
+                    ),
+                    Text("Hyderabad, Telangana"),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(10.w),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5.r),
+                              color: Colors.blueAccent),
+                          child: Text(
+                            "Profile",
+                            style: GoogleFonts.roboto(color: Kwhite),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 10.w,
+                        ),
+                        Container(
+                          padding: EdgeInsets.all(10.w),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5.r),
+                              border: Border.all(color: kblack.withOpacity(0.6))
+                              //color: Colors.blueAccent
+                              ),
+                          child: Text("Message"),
+                        )
+                      ],
+                    )
                   ],
                 ),
               ),
@@ -354,7 +479,11 @@ class _ProjectDetailsState extends State<ProjectDetails> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Project Activity"),
+                    Text(
+                      "Project Activity",
+                      style: GoogleFonts.roboto(
+                          fontSize: 16.sp, fontWeight: FontWeight.w500),
+                    ),
                     SizedBox(
                       height: 10.h,
                     ),
