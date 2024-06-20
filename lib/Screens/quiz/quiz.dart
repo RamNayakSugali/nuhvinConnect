@@ -115,6 +115,7 @@ class _QuizhomeState extends State<Quizhome> {
             Expanded(
                 child: ListView(
               shrinkWrap: false,
+              physics: AlwaysScrollableScrollPhysics(),
               children: [
                 Container(
                   margin: EdgeInsets.only(bottom: 15.h),
