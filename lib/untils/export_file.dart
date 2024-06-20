@@ -57,10 +57,14 @@ export 'package:nuhvinconnect/Screens/quiz/quiz_result.dart';
 export 'package:nuhvinconnect/Screens/quiz/quiz_game.dart';
 export 'package:nuhvinconnect/Screens/Settings/data_and_storage.dart';
 export 'package:nuhvinconnect/Screens/Settings/messaging.dart';
+export 'package:nuhvinconnect/Screens/project/project_list.dart';
+export 'package:nuhvinconnect/Screens/project/project_details.dart';
 
 //Authorization
 export 'package:nuhvinconnect/Screens/Authorization/sign_up.dart';
+export 'package:nuhvinconnect/Screens/Authorization/register_type.dart';
 export 'package:nuhvinconnect/Screens/Authorization/sign_in.dart';
+export 'package:nuhvinconnect/Screens/Authorization/register_form_screen.dart';
 export 'package:nuhvinconnect/Screens/Authorization/forgot_password.dart';
 
 // Controllers

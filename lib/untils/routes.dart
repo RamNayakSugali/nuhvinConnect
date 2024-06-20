@@ -118,6 +118,24 @@ class Routes {
         transition: Transition.rightToLeft,
         page: () => SignIn()),
     GetPage(
+        name: kRegisterScreen,
+        transition: Transition.rightToLeft,
+        page: () => Registertype()),
+    GetPage(
+        name: kRegisterFormScreen,
+        transition: Transition.rightToLeft,
+        page: () => RegisterFormScreen(
+              selectedType: '',
+            )),
+    GetPage(
+        name: kProjectList,
+        transition: Transition.rightToLeft,
+        page: () => ProjectList()),
+    GetPage(
+        name: kProjectDetails,
+        transition: Transition.rightToLeft,
+        page: () => ProjectDetails()),
+    GetPage(
         name: kNavigationScreen,
         transition: Transition.rightToLeft,
         page: () => Bottom_navigation()),
